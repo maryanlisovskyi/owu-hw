@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+main{
+    width: 100%;
+    height: 80px;
+    background: #494949;
+}
+i{
+    background: #ff0000;
+}
+.bg-color-blue{
+    background: #024c9d;
+}
