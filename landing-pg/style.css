@@ -1,0 +1,353 @@
+*{ 
+    padding: 0; 
+    margin: 0; 
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background: #FDFDFD;
+color:#373737;
+}
+
+h1{
+    font-size: 54px;
+}
+
+h2{
+font-size: 42px;
+padding-bottom: 25px;
+}
+
+h3{
+    font-size: 32px;
+
+}
+p{
+    font-size: 18px;
+}
+.container{
+   width: 1180px;
+   margin: 0 auto; 
+}
+
+.flex{
+    display: flex;
+}
+
+.btn {
+
+    display: inline-block;
+    padding: 14px 45px;
+    border-radius: 24px;
+    font-size: 14px;
+    
+    background: #476F6E;
+    color:#fff;
+    transition: .2s;
+}
+
+
+.btn:hover {
+    background: #B2C2C1;
+}
+
+.header{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    padding: 6px 0;
+    background-image: url("img/header-bg.jpg");
+}
+.header-top{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul li a{
+    color:#fff;
+    margin:0 15px;
+    font-size: 16px;
+    transition: .25s;
+}
+
+.menu ul li a:hover{
+    opacity: .8;
+}
+
+.social-media a{
+font-size: 26px;
+color: #fff;
+transition: .2s;
+}
+
+.social-media a:hover{
+opacity: .8;
+}
+
+.social-media a:nth-child(n+1){
+    margin:0 5px;
+}
+
+.logo a img{
+    height: 40px;
+    transition: .2s;
+}
+.logo a img:hover{
+    height: 40px;
+    opacity: .8;
+}
+
+.main{
+    height: 680px;
+    width: 100%;
+    padding: 6px 0;
+    background-image: url("img/main-bg.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+
+.main .info-block{
+    background-image: url("img/semicircle-bg.svg");
+    height: 720px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+}
+
+.main .info{
+align-items: center;
+}
+
+.main .info .kloobok-logo-ok-white{
+height: 300px;
+}
+
+.main .info .btn-donate{
+margin-left: 120px;
+}
+
+.successes{
+    background: #edecec;
+}
+.successes .items{
+    justify-content: space-around;
+    padding: 40px 0;
+}
+.successes .item{
+    text-align: center;
+}
+.successes .item h3{
+    font-size: 54px;
+}
+
+.vidualsatun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .campakesad, .vebusines, .nigkugas {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+  }
+  .vebusines {
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .campakesad {
+    background: #6bb5b6;
+    position: relative;
+    transition: .5s;
+  }
+  .nigkugas {
+    font-size: 50px;
+    line-height: 94px;
+    animation: phone .9s ease-in-out infinite;
+  }
+  .dsacin {
+    position: absolute;
+    opacity: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    top: 28px;
+    font-size: 15px;
+    transform: scaleX(-1);
+    transition: .5s ease-in-out;
+  }
+  .nigkugas i {
+    transition: .5s ease-in-out;
+  }
+  .campakesad:hover {
+    background: #476F6E;
+  }
+  .campakesad:hover i {
+    transition: .5s ease-in-out;
+    transform: scale(0);
+  }
+  .campakesad:hover .dsacin {
+    transform: scaleX(1);
+    transition: .5s ease-in-out;
+    opacity: 1;
+  }
+  .campakesad:hover::before,
+  .campakesad:hover::after {
+    content: '';
+    position: absolute;
+    border: 1px solid #fff;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: pulse 1.8s linear infinite;
+    opacity: 0;
+  }
+  .campakesad:hover::after {
+    animation-delay: .5s;
+  }
+  
+  @keyframes phone {
+    0%, 100% {
+    transform: rotate(-20deg);
+    }
+    50% {
+    transform: rotate(21deg);
+    }
+  }
+  @keyframes pulse {
+    0% {
+    transform: scale(0.5);
+    opacity: 0;
+    }
+    50% {
+    opacity: 1;
+    }
+    100% {
+    transform: scale(1.2);
+    opacity: 0;
+    }
+  }
+
+
+.about-us{
+    background-image: url("img/bg-silv.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 55px 0;
+}
+.about-us .team {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-us .text {
+    width: 450px;
+}
+
+.about-us .text p{
+padding-bottom: 20px;
+}
+
+.about-us .team .img-team{
+    width: 550px;
+}
+
+
+.shelter{
+    background-image: url("img/bg-silv.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 55px 0;
+    text-align: center;
+
+}
+.shelter .text{
+    padding: 0 185px 0;
+}
+
+.swiper {
+    width: 800px;
+    height: 420px;
+    margin: 25px 0;
+  }
+  .swiper-button-next:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    color: #373737;
+    font-size: 12px;
+}
+
+
+
+.donate{
+    background-image: url("img/bg-dog-s-paw.jpg");
+    padding: 85px 0;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.donate .donate-block{
+    justify-content: space-around;
+    align-items: center;
+}
+.donate .donate-block .text{
+    width: 750px;
+}
+.donate .donate-block .text h3{
+    padding-bottom: 25px;    
+}
+.donate .donate-block .btn{
+    background:#fff;
+    color: #253c3c;
+}
+
+
+.kloobok-bot{
+    background:#fff;
+    padding: 65px 0;
+}
+.kloobok-bot .kloobok-bot-teleg{
+    justify-content: space-around;
+    align-items: center;
+}
+.kloobok-bot .tel-bot{
+    width: 450px;
+}
+.kloobok-bot .text{
+    width: 550px;
+    text-align: center;
+}
+.kloobok-bot .text p{
+    padding-bottom: 15px;
+}
+
+
+.footer{
+    text-align: center;
+    background: #355555;
+}
+.footer .kloobok-logo-ok-white{
+width: 250px;
+}
+.footer .up-footer{
+align-items: center;
+justify-content: space-around;
+padding: 10px 0;
+}
+.footer .sub-footer{
+    padding: 10px 0;
+
+    background: #253c3c;
+}
+.footer .sub-footer p{
+    color: #edecec;
+font-size: 14px;
+}
