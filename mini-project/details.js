@@ -11,46 +11,61 @@ const container = document.createElement('div');
 container.classList.add('container')
 document.body.append(container);
 
+const singeleUserPage = document.createElement('div');
+singeleUserPage.classList.add('single-page', 'flex')
+container.append(singeleUserPage);
+
+
+
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
 .then(response=>response.json())
 .then(value=>{
+   
+    const userDiv = document.createElement('div');
+    userDiv.classList.add('user-info');
+    singeleUserPage.append(userDiv);  
     for (const item in value) {
-        const userDiv = document.createElement('div');
+        const userParagraph = document.createElement('p');
         if (typeof value[item] !== 'object') {
-            userDiv.innerText = `${item} ${value[item]}`;
+            userParagraph.innerText = `${item} ${value[item]}`;
         }else{
-            userDiv.innerText = `${item}`;
+            userParagraph.innerText = `${item}`;
             for (const key in value[item]) {
-                const userInnerDiv = document.createElement('div');
+                const userInnerDiv = document.createElement('p');
                 if (typeof value[item][key] !== 'object') {
                     userInnerDiv.innerText = `${key} --- ${value[item][key]}`;
                 }else{
                     userInnerDiv.innerText = `${key} : `;
                     for (const element in value[item][key]) {
-                        const htmlDivElement = document.createElement('div');
+                        const htmlDivElement = document.createElement('p');
                         if(typeof value[item][key][element] !== 'object' ){
                             htmlDivElement.innerText = `${element} --- ${value[item][key][element]}`
                         }
                         userInnerDiv.append(htmlDivElement);
                     }
                 }
-                userDiv.append(userInnerDiv)
+                userParagraph.append(userInnerDiv)
             }
         }
-        container.append(userDiv)
+        userDiv.append(userParagraph)
     }
 
     fetch(`https://jsonplaceholder.typicode.com/posts/${value.id}/comments`)
         .then(response=>response.json())
         .then(comments=>{
+            const userComments = document.createElement('div');
+            userComments.classList.add('user-comments');
+            singeleUserPage.append(userComments);  
+
             const h4 = document.createElement('h4');
             h4.innerText = 'user comments';
-            container.append(h4);
+            userComments.append(h4);
+
             for(const item of comments){
                     const userComment = document.createElement('p');
                     userComment.classList.add('comment');
                     userComment.innerText = `${item.body}`;
-                    container.append(userComment);
+                    userComments.append(userComment);
             }
         });
 });
